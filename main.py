@@ -3,9 +3,6 @@ import os
 
 palavras = ['macaco', 'elefante', 'jacare', 'girafa', 'tartaruga', 'calango', 'camelo', 'cachoro' 'uva', 'figo',
             'mamão', 'amora', 'caju', 'laranja', 'cupuaçu', 'morango', 'cereja', 'abacaxi', 'jaca', 'banana', 'pera', 'acerola', 'manga']
-# palavras_frutas = ['uva', 'figo', 'mamão', 'amora', 'caju', 'laranja'] #, 'cupuaçu', 'morango', 'cereja', 'abacaxi', 'jaca', 'banana', 'pera', 'acerola', 'manga']
-# palavras_nomes = ['victor', 'marcos', 'ana', 'joão']
-
 
 # Escolhendo uma palavra aleatoria e deixando tudo em maiusculo
 palavra_aleatoria = random.choice(palavras).upper()
