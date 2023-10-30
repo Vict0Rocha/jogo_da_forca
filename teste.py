@@ -41,7 +41,9 @@ print(palavra)
 print('\n')
 palpite = input('Digite seu palpite <<< ').upper()
 
-if palpite in palavra:
-    print('Ok')
-else:
-    print('erro')
+while not palavra.issubset(palpite):
+    if palpite in palavra:
+        print('Ok')
+    else:
+        print('erro')
+    palpite = input('Digite seu palpite <<< ').upper()
