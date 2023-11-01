@@ -24,100 +24,100 @@ def palavras_sorteada():  # Função para sortear uma palavra
 def boneco_forca(chances_retantes):
     boneco = [
         '''
-           ------
-           |    |
-           |    
-           |    
-           |    
-           |    
-        ============
-        ''',
+    ------
+    |    |
+    |    
+    |    
+    |    
+    |    
+==============
+''',
         '''
-           ------
-           |    |
-           |    O
-           |    
-           |    
-           |    
-        ============
-        ''',
+    ------
+    |    |
+    |    O
+    |    
+    |    
+    |    
+==============
+''',
         '''
-           ------
-           |    |
-           |    O
-           |    |
-           |    
-           |    
-        ============
-        ''',
+    ------
+    |    |
+    |    O
+    |    |
+    |    
+    |    
+==============
+''',
         '''
-           ------
-           |    |
-           |    O
-           |   /|
-           |    
-           |    
-        ============
-        ''',
+    ------
+    |    |
+    |    O
+    |   /|
+    |    
+    |    
+==============
+''',
         '''
-           ------
-           |    |
-           |    O
-           |   /|\\
-           |    
-           |    
-        ============
-        ''',
+    ------
+    |    |
+    |    O
+    |   /|\\
+    |    
+    |    
+==============
+''',
         '''
-           ------
-           |    |
-           |    O
-           |   /|\\
-           |   / 
-           |    
-        ============
-        ''',
+    ------
+    |    |
+    |    O
+    |   /|\\
+    |   / 
+    |    
+==============
+''',
         '''
-           ------
-           |    |
-           |    O
-           |   /|\\
-           |   / \\
-           |    
-        ============
+    ------
+    |    |
+    |    O
+    |   /|\\
+    |   / \\
+    |    
+==============
         ''']
 
     return boneco[chances_retantes]
 
 
-print(23*'-')
-print((4*' '), 'JOGO DA FORCA')
-print(23*'-')
-print('\nObjetivo: Tente adivinhar a palvra gerada.')
-print('Regras: Você só pode digitar uma letra por vez, com o limite de 6 erro.\n')
+# print(23*'-')
+# print((4*' '), 'JOGO DA FORCA')
+# print(23*'-')
+# print('\nObjetivo: Tente adivinhar a palvra gerada.')
+# print('Regras: Você só pode digitar uma letra por vez, com o limite de 6 erro.\n')
 
-loop = True
-palavra = palavras_sorteada()
-palavra_letras = []
-palpites_certo = []
+# loop = True
+# palavra = palavras_sorteada()
+# palavra_letras = []
+# palpites_certo = []
 
-print('A palavra sorteada é... ')
-for letra in palavra:
-    print('_', end=' ')
-    palavra_letras.append(letra)
+# print('A palavra sorteada é... ')
+# for letra in palavra:
+#     print('_', end=' ')
+#     palavra_letras.append(letra)
 
-print(palavra)
-print('\n')
+# print(palavra)
+# print('\n')
 
-while loop:
+# while loop:
 
-    palpite = input('Digite seu palpite <<< ').upper()
+#     palpite = input('Digite seu palpite <<< ').upper()
 
-    palpites_certo.append(palpite)
+#     palpites_certo.append(palpite)
 
-    for letras in palavra_letras:
-        if palpite == letras:
-            print(palpite, end=' ')
+#     for letras in palavra_letras:
+#         if palpite == letras:
+#             print(palpite, end=' ')
 
-        else:
-            print('_', end=' ')
+#         else:
+#             print('_', end=' ')
