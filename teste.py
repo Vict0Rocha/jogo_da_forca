@@ -21,6 +21,75 @@ def palavras_sorteada():  # Função para sortear uma palavra
     return palavra_sorteada.upper()
 
 
+def boneco_forca(chances_retantes):
+    boneco = [
+        '''
+           ------
+           |    |
+           |    
+           |    
+           |    
+           |    
+        ============
+        ''',
+        '''
+           ------
+           |    |
+           |    O
+           |    
+           |    
+           |    
+        ============
+        ''',
+        '''
+           ------
+           |    |
+           |    O
+           |    |
+           |    
+           |    
+        ============
+        ''',
+        '''
+           ------
+           |    |
+           |    O
+           |   /|
+           |    
+           |    
+        ============
+        ''',
+        '''
+           ------
+           |    |
+           |    O
+           |   /|\\
+           |    
+           |    
+        ============
+        ''',
+        '''
+           ------
+           |    |
+           |    O
+           |   /|\\
+           |   / 
+           |    
+        ============
+        ''',
+        '''
+           ------
+           |    |
+           |    O
+           |   /|\\
+           |   / \\
+           |    
+        ============
+        ''']
+
+    return boneco[chances_retantes]
+
+
 print(23*'-')
 print((4*' '), 'JOGO DA FORCA')
 print(23*'-')
