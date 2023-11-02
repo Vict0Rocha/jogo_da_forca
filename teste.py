@@ -1,5 +1,5 @@
 import random
-import sys
+import os
 
 
 def palavras_sorteada():  # Função para sortear uma palavra
@@ -90,33 +90,91 @@ def boneco_forca(chances_retantes):  # Função com uma lista com o desenho do b
     return boneco[chances_retantes]
 
 
-print(23*'-')
-print((4*' '), 'JOGO DA FORCA')
-print(23*'-')
-print('\nObjetivo: Tente adivinhar a palvra gerada.')
-print('Regras: Você só pode digitar uma letra por vez, com o limite de 6 erros.\n')
+def painel():
+    print(23*'-')
+    print((4*' '), 'JOGO DA FORCA')
+    print(23*'-')
+    print('\nObjetivo: Tente adivinhar a palvra gerada.')
+    print('Regras: Você só pode digitar uma letra por vez, com o limite de 6 erros.\n')
 
-loop = True
+
+chances = 0
+ganhou = False
+letras_digitadas = []
+painel()
+print(boneco_forca(chances))
 palavra = palavras_sorteada()
-# palavra_letras = []
-palpites_certo = []
-conjunto_palavra = [palavra]
 
-print('A palavra sorteada é... ')
-espacos = '_ ' * len(palavra)
-print(espacos)
+while True:
 
-print(palavra)
-print('\n')
+    for letra in palavra:
+        if letra.upper() in letras_digitadas:
+            print(letra, end=" ")
+        else:
+            print('_', end=" ")
 
-while conjunto_palavra == palpites_certo:
+    print(f'\n\nVocê tem {6 - chances} chances restantes\n')
 
-    palpite = input('Digite seu palpite <<< ').upper()
+    palpite = input('Digite o seu palpite: ').upper()
+    letras_digitadas.append(palpite)
 
-    if palpite in conjunto_palavra:
-        palpites_certo.append(palpite)
-        for letras in palavra:
-            if palpite == letras:
-                print(palpite, end=' ')
-            else:
-                print('_', end=' ')
+    if palpite not in palavra:
+        chances += 1
+        os.system('cls')
+        print(boneco_forca(chances))
+
+    ganhou = True
+
+    for letra in palavra:
+        if letra.upper() not in letras_digitadas:
+            ganhou = False
+
+    if chances == 6:
+        os.system('cls')
+        print(boneco_forca(chances))
+        print('GAME OVER - Você PERDEU')
+        print(f'A palavra era: {palavra}\n')
+        print('Você deseja jogar de novo? ')
+        game = input('[S] - sim [N] - não\n').upper()
+
+        match game:
+            case 'S':
+                os.system('cls')
+                chances = 0
+                ganhou = False
+                letras_digitadas = []
+                painel()
+                print(boneco_forca(chances))
+                palavra = palavras_sorteada()
+                continue
+            case 'N':
+                print('FIM DE JOGO')
+                break
+            case Exception:
+                print('Opção inválida. FIM DE JOGO')
+                break
+
+    if ganhou:
+        os.system('cls')
+        print(boneco_forca(chances))
+        print('PARABÉNS VOCÊ GANHOU!')
+        print(f'A palavra era: {palavra}\n')
+        print('Você deseja jogar de novo? ')
+        game = input('[S] - sim [N] - não\n').upper()
+
+        match game:
+            case 'S':
+                os.system('cls')
+                chances = 0
+                ganhou = False
+                letras_digitadas = []
+                painel()
+                print(boneco_forca(chances))
+                palavra = palavras_sorteada()
+                continue
+            case 'N':
+                print('FIM DE JOGO')
+                break
+            case Exception:
+                print('Opção inválida. FIM DE JOGO')
+                break
