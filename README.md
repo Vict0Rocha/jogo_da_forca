@@ -10,11 +10,10 @@
 
 ### Dicas e ideias para aprimoramento <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Telegram-Animated-Emojis/main/People/Handshake.webp" alt="Handshake" width="25" height="25" />
 
-- [x] Boneco para dar mais dinamica e interação
-- [x] Exibir os erros do jogador
-- [x] Dar dica da palavra sorteada
-- [ ] Colocar em outro arquivo as funções, para faciliar a leitura o codigo principal
-- [ ]  Criar uma função que pergunta se o jogar quer jogar de novo, para reduzir o codigo.
+- [x] Boneco para dar mais dinamica e interação.
+- [x] Exibir os erros do jogador.
+- [x] Dar dica da palavra sorteada.
+- [ ] Colocar em outro arquivo as funções, para faciliar a leitura o codigo principal.
 # 
 ![image](https://github.com/Vict0Rocha/jogo_da_forca/assets/107584325/8452a26a-cf08-40c0-b15d-764ae13d9509)
 
